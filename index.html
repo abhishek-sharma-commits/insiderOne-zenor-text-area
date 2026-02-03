@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon" type="image/png" />
+    <base href="https://www.insiderone.in/app/" />
+
+    <!-- title and description-->
+    <title>InsiderOne</title>
+    <meta
+      name="description"
+      content="InsiderOne - Social sharing network HTML Template"
+    />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="assets/css/tailwind.css?v=3.3" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.3" />
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Hide scrollbar but keep scrolling */
+      textarea {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Old Edge */
+      }
+
+      textarea::-webkit-scrollbar {
+        display: none; /* Chrome / Safari */
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DVJ2H94MBC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DVJ2H94MBC");
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- header -->
+      <header
+        class="z-[100] h-[--m-top] fixed top-0 left-0 w-full flex items-center bg-white sky-50 backdrop-blur-xl border-b border-slate-200 dark:bg-dark2 dark:border-slate-800"
+      >
+        <div class="flex items-center w-full xl:px-6 px-2 max-lg:gap-10">
+          <div class="2xl:w-[--w-side] lg:w-[--w-side-sm]">
+            <!-- left -->
+            <div class="flex items-center gap-1">
+              <!-- icon menu -->
+              <button
+                uk-toggle="target: #site__sidebar ; cls :!-translate-x-0"
+                class="flex items-center justify-center w-8 h-8 text-xl rounded-full hover:bg-gray-100 xl:hidden dark:hover:bg-slate-600 group"
+              >
+                <ion-icon
+                  name="menu-outline"
+                  class="text-2xl group-aria-expanded:hidden"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="hidden text-2xl group-aria-expanded:block"
+                ></ion-icon>
+              </button>
+              <div id="logo">
+                <a href="https://www.insiderone.in/app/feeds">
+                  <img
+                    src="assets/images/InsiderOne Black logo.png"
+                    alt=""
+                    class="w-36 md:block"
+                  />
+                  <!-- <img src="assets/images/logo-light.svg" alt="" class="dark:hidden">
+	    <img src="assets/images/logo-dark.svg" alt="" class="hidden dark:!block"> -->
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 relative">
+            <div class="max-w-[1220px] mx-auto flex items-center">
+              <!-- header icons -->
+              <div
+                class="flex items-center sm:gap-4 gap-2 absolute right-5 top-1/2 -translate-y-1/2 text-black"
+              >
+                <!-- profile -->
+                <div
+                  class="rounded-full relative bg-secondery cursor-pointer shrink-0"
+                >
+                  <img
+                    src="assets/images/avatars/avatar-default.jpg"
+                    alt=""
+                    class="sm:w-9 sm:h-9 w-7 h-7 rounded-full shadow shrink-0"
+                  />
+                </div>
+                <div
+                  class="hidden bg-white rounded-lg drop-shadow-xl dark:bg-slate-700 w-64 border2"
+                  uk-drop="offset:6;pos: bottom-right;animate-out: true; animation: uk-animation-scale-up uk-transform-origin-top-right "
+                >
+                  <a
+                    href="https://www.insiderone.in/app/profile/abhishek-sharma-1cvjthev"
+                  >
+                    <div class="p-4 py-5 flex items-center gap-4">
+                      <img
+                        src="assets/images/avatars/avatar-default.jpg"
+                        alt=""
+                        class="w-10 h-10 rounded-full shadow"
+                      />
+                      <div class="flex-1">
+                        <h4 class="text-sm font-medium text-black">
+                          Abhishek kr
+                        </h4>
+                        <div
+                          class="text-sm mt-1 text-blue-600 font-light dark:text-white/70"
+                        >
+                          @abhishek_3rbernxl
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <hr class="dark:border-gray-600/60" />
+
+                  <nav
+                    class="p-2 text-sm text-black font-normal dark:text-white"
+                  >
+                    <!-- <a href="form-register.html">
+        <div
+            class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            Register
+        </div>
+    </a>
+    <a href="form-login.html">
+        <div
+            class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+            </svg>
+            Login
+        </div>
+    </a> -->
+                    <!-- <a href="../host-event">
+        <div
+            class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+            </svg>
+            Host Event
+        </div>
+    </a> -->
+                    <!-- <a href="../profile/"> -->
+                    <a href="https://www.insiderone.in/app/settings/">
+                      <div
+                        class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        Settings
+                      </div>
+                    </a>
+                    <!-- <button type="button" class="w-full">
+        <div
+            class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+            Night mode
+            <span
+                class="bg-slate-200/40 ml-auto p-0.5 rounded-full w-9 dark:hover:bg-white/20">
+                <span
+                    class="bg-white block h-4 relative rounded-full shadow-md w-2 w-4 dark:bg-blue-600"></span>
+            </span>
+        </div>
+    </button> -->
+                    <hr class="-mx-2 my-2 dark:border-gray-600/60" />
+                    <a href="https://www.insiderone.in/app/logout/">
+                      <div
+                        class="flex items-center gap-2.5 hover:bg-secondery p-2 px-2.5 rounded-md dark:hover:bg-white/10"
+                      >
+                        <svg
+                          class="w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                          ></path>
+                        </svg>
+                        Log Out
+                      </div>
+                    </a>
+                  </nav>
+                </div>
+
+                <div class="flex items-center gap-2 hidden">
+                  <img
+                    src="assets/images/avatars/avatar-2.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full shadow"
+                  />
+
+                  <div class="w-20 font-semibold text-gray-600">Hamse</div>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- sidebar -->
+      <div
+        id="site__sidebar"
+        class="fixed top-0 left-0 z-[99] pt-[--m-top] overflow-hidden transition-transform xl:duration-500 max-xl:w-full max-xl:-translate-x-full"
+      >
+        <!-- sidebar inner -->
+        <div
+          class="p-2 max-xl:bg-white shadow-sm 2xl:w-72 sm:w-64 w-[80%] h-[calc(100vh-64px)] relative z-30 max-lg:border-r dark:max-xl:!bg-slate-700 dark:border-slate-700"
+        >
+          <div class="pr-4" data-simplebar>
+            <nav id="side">
+              <ul>
+                <li>
+                  <a href="https://www.insiderone.in/app/feeds">
+                    <img
+                      src="assets/images/icons/home-outline.svg"
+                      alt="feeds"
+                      class="w-6"
+                    />
+                    <span> Feed </span>
+                  </a>
+                </li>
+                <!-- <li >
+            <a href="#" class="text-black">
+                <img src="assets/images/icons/chatbubble-ellipses-outline.svg" alt="messages" class="w-6">
+                <span> messages </span>
+            </a>
+        </li> -->
+                <li class="active" onclick="toggleDropdown(this)">
+                  <a href="javascript:void(0);">
+                    <img
+                      src="assets/images/icons/calendar-outline.svg"
+                      alt="events"
+                      class="w-6"
+                    />
+                    <span> Events </span>
+                    <span
+                      id="event-arrow"
+                      class="arrow-down fas fa-caret-down"
+                    ></span>
+                  </a>
+                  <ul class="event-show hidden text-black pl-10">
+                    <li onclick="event.stopPropagation()">
+                      <a href="https://www.insiderone.in/app/events"
+                        >All Events</a
+                      >
+                    </li>
+                    <li onclick="event.stopPropagation()">
+                      <a href="https://www.insiderone.in/app/registered-events"
+                        >Registered Events</a
+                      >
+                    </li>
+                    <!-- <li><a href="#">Saved Events</a></li> -->
+                  </ul>
+                </li>
+                <li onclick="toggleDropdown(this)">
+                  <a href="javascript:void(0);">
+                    <img
+                      src="assets/images/icons/golf-outline.svg"
+                      alt="host-events"
+                      class="w-6"
+                    />
+                    <span>Host Events </span>
+                    <span
+                      id="host-events-arrow"
+                      class="arrow-down fas fa-caret-down"
+                    ></span>
+                  </a>
+                  <ul class="host-events-show hidden text-black pl-10">
+                    <li onclick="event.stopPropagation()">
+                      <a href="https://www.insiderone.in/app/host-event"
+                        >Host an Event</a
+                      >
+                    </li>
+                    <li onclick="event.stopPropagation()">
+                      <a href="https://www.insiderone.in/app/hosted-events"
+                        >My Hosted Events</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li onclick="toggleDropdown(this)">
+                  <a href="https://www.insiderone.in/app/jobs-internships">
+                    <img
+                      src="assets/images/icons/briefcase-outline.svg"
+                      alt="jobs&internships"
+                      class="w-6"
+                    />
+                    <span> Jobs & Internships </span>
+                    <!-- <span id="jobs-internships-arrow" class="arrow-down fas fa-caret-down "></span> -->
+                  </a>
+                  <!-- <ul class="jobs-internships-show hidden text-black pl-10">
+                <li onclick="event.stopPropagation()"><a href="https://www.insiderone.in/app/jobs-internships">Find Jobs & Internships</a></li>
+                <li onclick="event.stopPropagation()"><a href="https://www.insiderone.in/app/applied">Applied Jobs & Internships</a></li>
+                <li onclick="event.stopPropagation()"><a href="javascript:void(0);">Bookmarked Jobs & Internships</a></li>
+            </ul> -->
+                </li>
+                <!-- <li >
+            <a href="../workshops">
+                <img src="assets/images/icons/extension-puzzle-outline.svg" alt="workshops" class="w-6">
+                <span>Workshops </span>
+            </a>
+        </li> -->
+                <li class="!hidden text-black" id="show__more">
+                  <a href="javascript:void(0);">
+                    <img
+                      src="assets/images/icons/ipc-outline.svg"
+                      alt="saved-posts"
+                      class="w-6"
+                    />
+                    <span> IPC Index </span>
+                  </a>
+                </li>
+                <li class="text-black" id="show__more">
+                  <a href="/blog" target="_blank">
+                    <img
+                      src="assets/images/icons/blog-outline.svg"
+                      alt="blogs"
+                      class="w-6"
+                    />
+                    <span> InsiderOne Blogs</span>
+                  </a>
+                </li>
+                <!-- <li >
+            <a href="#" class="text-black">
+                <img src="assets/images/icons/trophy-outline.svg" alt="competitions" class="w-6">
+                <span>Competitions </span>
+            </a>
+        </li> -->
+                <!-- <li class="!hidden text-black" id="show__more">
+            <a href="#">
+                <img src="assets/images/icons/settings-outline.svg" alt="myaccount" class="w-6">
+                <span> My Account </span>
+            </a>
+        </li> -->
+                <li class="text-black" id="show__more">
+                  <a href="https://www.insiderone.in/app/logout">
+                    <img
+                      src="assets/images/icons/log-out-outline.svg"
+                      alt="logout"
+                      class="w-6"
+                    />
+                    <span> Logout </span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- <button type="button"
+        class="flex items-center gap-4 py-2 px-4 w-full font-medium text-sm text-black dark:text-white"
+        uk-toggle="target: #show__more; cls: !hidden uk-animation-fade">
+        <svg class="bg-gray-200 rounded-full w-6 h-6 dark:bg-slate-700" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+        <span id="show__more"> See More </span>
+        <span class="!hidden" id="show__more"> See Less </span>
+    </button> -->
+
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              <script>
+                function toggleDropdown(element) {
+                  // Toggle the dropdown visibility
+                  $(element).find(".event-show").toggleClass("hidden");
+                  $(element).find("#event-arrow").toggleClass("rotate-180");
+
+                  $(element).find(".host-events-show").toggleClass("hidden");
+                  $(element)
+                    .find("#host-events-arrow")
+                    .toggleClass("rotate-180");
+
+                  $(element)
+                    .find(".jobs-internships-show")
+                    .toggleClass("hidden");
+                  $(element)
+                    .find("#jobs-internships-arrow")
+                    .toggleClass("rotate-180");
+                }
+              </script>
+            </nav>
+
+            <!--LEFT PAGES-->
+            <!--
+<nav id="side"
+    class="font-medium text-sm text-black border-t pt-3 mt-2 dark:text-white dark:border-slate-800">
+    <div class="px-3 pb-2 text-sm font-medium">
+        <div class="text-black dark:text-white">Pages</div>
+    </div>
+
+    <ul class="mt-2 -space-y-2" uk-nav="multiple: true">
+
+        <li>
+            <a href="setting.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span> Settings </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="form-login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                </svg>
+                <span> Authentication </span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<div class="text-xs font-medium flex flex-wrap gap-2 gap-y-0.5 p-2 mt-2">
+    <a href="#" class="hover:underline">About</a>
+    <a href="#" class="hover:underline">Contact Us </a>
+
+</div>
+-->
+          </div>
+        </div>
+        <!-- sidebar overly -->
+        <div
+          id="site__sidebar__overly"
+          class="absolute top-0 left-0 z-20 w-screen h-screen xl:hidden backdrop-blur-sm"
+          uk-toggle="target: #site__sidebar ; cls :!-translate-x-0"
+        ></div>
+      </div>
+
+      <!-- main contents -->
+      <main
+        id="site__main"
+        class="2xl:ml-[--w-side] xl:ml-[--w-side-sm] p-2.5 h-[calc(100vh-var(--m-top))] mt-[--m-top]"
+      >
+        <div
+          class="relative overflow-hidden border -m-2.5 dark:border-slate-700 h-full"
+        >
+          <div class="flex bg-white dark:bg-dark2 h-full">
+            <!-- message center -->
+            <div class="flex-1 flex flex-col">
+              <!-- chats bubble -->
+              <div id="parent" class="w-full p-5 overflow-y-auto flex-1">
+                <div class="py-4 text-center text-sm lg:pt-8">
+                  <img
+                    src="assets/images/icons/zenor-ae.jpg"
+                    class="w-24 h-24 rounded-full mx-auto mb-3"
+                    alt=""
+                  />
+                  <div class="mt-8">
+                    <div
+                      class="md:text-xl text-base font-medium text-black dark:text-white"
+                    >
+                      ZENOR-Æ
+                    </div>
+                    <div class="text-gray-500 text-sm dark:text-white/80">
+                      @ZENOR-Æ
+                    </div>
+                  </div>
+                </div>
+
+                <div id="chat-window" class="text-sm font-medium space-y-6">
+                  <div class="flex justify-center gap-2 uk-scrollspy-inview">
+                    <button
+                      id="one"
+                      type="button"
+                      class="button items-center justify-center rounded-full max-w-sm flex-1 flex gap-2 text-black bg-primary-soft"
+                    >
+                      Build me a resume
+                    </button>
+                    <button
+                      id="two"
+                      type="button"
+                      class="button items-center justify-center rounded-full max-w-sm flex-1 flex gap-2 text-black bg-primary-soft"
+                    >
+                      Suggest me a career
+                    </button>
+                  </div>
+                  <!-- received -->
+                  <div class="flex gap-3">
+                    <img
+                      src="assets/images/avatars/avatar-zenor-ae.gif"
+                      alt=""
+                      class="w-9 h-9 rounded-full shadow"
+                    />
+                    <div class="px-4 py-2 rounded-[20px] max-w-sm bg-secondery">
+                      Hi Abhishek kr, Yo human! It's me, ZENOR-Æ — your digital
+                      career therapist with zero judgment and maximum glow-up
+                      energy 💅 Where we headed — new job, new skill, or new
+                      you?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- sending message area -->
+
+              <div class="flex items-center gap-2 md:p-3 p-2">
+                <div
+                  class="flex items-center w-full bg-secondery rounded-full px-3 py-1"
+                >
+                  <textarea
+                    id="query"
+                    rows="1"
+                    placeholder="Write your message..."
+                    class="w-full resize-none bg-secondery rounded-full px-4 py-2 pr-16 break-all whitespace-pre-wrap box-border outline-none focus:outline-none focus:ring-0 overflow-y-auto"
+                  ></textarea>
+
+                  <button
+                    id="send"
+                    type="button"
+                    class="ml-1 shrink-0 text-dark"
+                  >
+                    <ion-icon
+                      class="text-xl pt-2"
+                      name="send-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <!-- old sending message area -->
+
+              <!-- <div class="flex items-center inset-0 md:gap-4 gap-2 md:p-3 p-2 overflow-hidden">
+                            <div class="relative flex-1">
+                                <textarea id="query" placeholder="Write your message..." rows="1" class="w-full resize-none bg-secondery rounded-full px-4 pr-4 p-2"></textarea>
+
+                                <button id="send" type="button" class="text-dark shrink-0 p-2 absolute right-0.5 top-0">
+                                    <ion-icon class="text-xl flex md:hydrated" name="send-outline" role="img" aria-label="send outline"></ion-icon> 
+                                </button>
+                            </div>
+                        </div> -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!--bottom navbar-->
+
+    <!-- Javascript  -->
+    <script src="assets/js/uikit.min.js?v=3.3"></script>
+    <script src="assets/js/simplebar.js?v=3.3"></script>
+    <script src="assets/js/script.js?v=3.3"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const apiUrl =
+          "https://www.insiderone.in/insiderone-backend/chat/controller.php/chat";
+
+        function appendLoadingMessage() {
+          $("#chat-window").append(`
+                    <div id="loading-message" class="flex gap-3">
+                        <img src="assets/images/avatars/avatar-zenor-ae.gif" alt="" class="w-9 h-9 rounded-full shadow">
+                        <div class="px-4 py-2 rounded-[20px] max-w-sm bg-gradient-to-tr from-sky-500 to-blue-500 text-white shadow">
+                            <div class="flex items-center gap-2">
+                                <span>Thinking</span>
+                                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                                <span class="w-2 h-2 bg-white rounded-full animate-pulse [animation-delay:0.2s]"></span>
+                                <span class="w-2 h-2 bg-white rounded-full animate-pulse [animation-delay:0.4s]"></span>
+                            </div>
+                        </div>
+                    </div>
+                `);
+        }
+
+        function sanitizeHTML(text) {
+          const div = document.createElement("div");
+          div.textContent = text;
+          return div.innerHTML;
+        }
+
+        function appendMessage(message, sender) {
+          let query = $("#query").val();
+
+          // Sanitize the input message first
+          const sanitizedMessage = sanitizeHTML(message);
+
+          // Convert markdown to HTML using marked
+          const formattedMessage = marked.parse(sanitizedMessage, {
+            breaks: true, // Convert \n to <br>
+            gfm: true, // Enable GitHub Flavored Markdown
+            sanitize: false, // We've already sanitized the input
+            headerIds: false, // Disable automatic header IDs
+            mangle: false, // Disable mangling of header IDs
+          });
+
+          if (sender === "user") {
+            // Append user message normally
+            $("#chat-window").append(`
+                        <div class="flex gap-2 flex-row-reverse items-end">
+                            <img src="assets/images/avatars/avatar-default.jpg" alt="" class="w-9 h-9 rounded-full shadow">
+                            <div class="px-4 py-2 rounded-[20px] max-w-sm bg-gradient-to-tr from-sky-500 to-blue-500 text-white shadow"> ${query}</div>
+                        </div>
+                    `);
+          } else if (sender === "bot") {
+            // Append bot message wrapper with *empty* bubble (we will type into it)
+            const bubbleId = "bot-msg-" + Date.now();
+
+            $("#chat-window").append(`
+                        <div class="flex gap-3">
+                            <img src="assets/images/avatars/avatar-zenor-ae.gif" alt="" class="w-9 h-9 rounded-full shadow">
+                            <div id="${bubbleId}" class="px-4 py-2 rounded-[20px] max-w-sm bg-secondery"></div>
+                        </div>
+                    `);
+
+            const bubble = document.getElementById(bubbleId);
+
+            // Extract plain text for typing animation
+            const temp = document.createElement("div");
+            temp.innerHTML = formattedMessage;
+            const fullText = temp.textContent || temp.innerText;
+
+            const words = fullText.split(" "); // change to split("") for char-by-char
+            let index = 0;
+
+            function typeNextWord() {
+              if (index < words.length) {
+                bubble.innerHTML += words[index] + " ";
+                index++;
+
+                // Auto-scroll
+                $("#parent").scrollTop($("#parent")[0].scrollHeight + 256);
+
+                setTimeout(typeNextWord, 35); // SPEED: lower = faster
+              } else {
+                // After typing, replace with full markdown HTML
+                bubble.innerHTML = formattedMessage;
+
+                // Add target="_blank" to all anchor tags
+                $(bubble)
+                  .find("a")
+                  .attr("target", "_blank")
+                  .addClass("text-blue-500");
+
+                // Highlight code if needed
+                if (formattedMessage.includes("<code>")) {
+                  hljs.highlightAll();
+                }
+
+                // Final scroll
+                $("#parent").scrollTop($("#parent")[0].scrollHeight + 256);
+              }
+            }
+
+            typeNextWord();
+          }
+
+          // Final scroll for user messages
+          $("#parent").scrollTop($("#parent")[0].scrollHeight + 256);
+        }
+
+        $("#send").click(function () {
+          const query = $("#query").val().trim();
+
+          if (!query) {
+            return;
+          }
+
+          appendMessage(query, "user");
+          $("#query").val("");
+
+          // Get conversation history from local storage
+          let conversation = JSON.parse(localStorage.getItem("conversation"));
+          // Add user message to conversation
+          conversation.push({
+            role: "user",
+            content: query,
+          });
+
+          // Limit context size to 21 messages (1 system + last 10 user-assistant pairs)
+          const maxMessages = 21;
+          if (conversation.length > maxMessages) {
+            conversation = [conversation[0]].concat(
+              conversation.slice(-maxMessages + 1),
+            );
+          }
+
+          $.ajax({
+            url: apiUrl,
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+              conversation: conversation,
+              id: "CeCYFiJGdcSstI9oAe5x4kZTdUYzUW9NYnZhT1doM0thNlVCV2c9PQ",
+            }),
+            beforeSend: function () {
+              appendLoadingMessage();
+            },
+            success: function (response) {
+              $("#loading-message").remove();
+              if (response.status === "error") {
+                appendMessage(response.message, "bot");
+              } else {
+                // Add assistant message to conversation and update local storage
+                conversation.push({
+                  role: "assistant",
+                  content: response.response,
+                });
+                localStorage.setItem(
+                  "conversation",
+                  JSON.stringify(conversation),
+                );
+                appendMessage(response.response, "bot");
+              }
+            },
+            error: function () {
+              $("#loading-message").remove();
+              appendMessage("Error: Unable to connect", "bot");
+            },
+          });
+        });
+
+        $("#one").click(function () {
+          $("#query").val(
+            "Can you build an ATS optimised resume for my profile?",
+          );
+          $("#send").click();
+        });
+
+        $("#two").click(function () {
+          $("#query").val("Can you suggest a good career for my profile?");
+          $("#send").click();
+        });
+
+        // Allow pressing Enter to send the query
+        $("#query").keypress(function (event) {
+          if (event.which === 13) {
+            event.preventDefault();
+            $("#send").click();
+          }
+        });
+
+        // Initialize conversation in local storage if it doesn't exist
+        if (!localStorage.getItem("conversation")) {
+          const initialConversation = [
+            {
+              role: "system",
+              content: "You are a Q&A assistant.",
+            },
+          ];
+          localStorage.setItem(
+            "conversation",
+            JSON.stringify(initialConversation),
+          );
+        }
+      });
+    </script>
+
+    <!-- Ion icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
